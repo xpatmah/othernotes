@@ -63,3 +63,11 @@ However, this is equivalent to running something like this:
 $ mv README.md README
 $ git rm README.md
 $ git add README
+
+Deleting the local branch
+
+>git branch -d feature
+
+deleting the remote branch
+
+>git push https://github.com/xpatmah/oracledb.git --delete feature
