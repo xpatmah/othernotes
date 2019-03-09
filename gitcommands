@@ -1,0 +1,16 @@
+-- We are in the master branch now 
+
+git branch 
+
+feature/xyz
+*master
+
+-- we want to merge the feature brach into master the below command wound not automatically merge 
+-- it will only create the a new section in the master that will have the changes and commit and we need to commit that merge section
+
+git merge --squash feature
+
+commiting the merged section 
+
+git commit -m "feature and master branch merged" 
+
