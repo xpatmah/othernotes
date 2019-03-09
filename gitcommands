@@ -39,7 +39,7 @@ master   M1 -> M2 -> M3
                |
 feature        M2-> F1-> F2 
 
-@ > git rebase master
+@ > git rebase feature
 
 master   M1 -> M2 -> M3->F1->F2
                      |
