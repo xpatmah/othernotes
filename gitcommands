@@ -71,3 +71,7 @@ Deleting the local branch
 deleting the remote branch
 
 >git push https://github.com/xpatmah/oracledb.git --delete feature
+
+reverting the commited changes
+ 
+git revert HEAD
