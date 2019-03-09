@@ -18,15 +18,29 @@ git commit -m "feature and master branch merged"
 Git Rebase-
 ==========
 
-We Rebase the feature branch where it has been branched 
+When We Rebase the feature branch where it has been branched 
 
 master   M1 -> M2 -> M3
                |
 feature        M2-> F1-> F2 
 
 after below command feature branch will have new structure 
-git rebase master 
+
+@ > git rebase master 
 
 master   M1 -> M2 -> M3
+                     |
+feature              M3-> F1-> F2 
+
+
+When We Rebase the master branch with feature branch 
+initial structure 
+master   M1 -> M2 -> M3
+               |
+feature        M2-> F1-> F2 
+
+@ > git rebase master
+
+master   M1 -> M2 -> M3->F1->F2
                      |
 feature              M3-> F1-> F2 
