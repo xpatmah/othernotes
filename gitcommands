@@ -72,6 +72,7 @@ deleting the remote branch
 
 >git push https://github.com/xpatmah/oracledb.git --delete feature
 
-reverting the commited changes
- 
-git revert HEAD
+$ git rm -r --cached .  # .for all files in diractory and use file name isteed of . to get out of commited area 
+$ git add .  # . for all files in diractory and use file name isteed of . to get in the commited area 
+$ git commit -m "Clean up ignored files" 
+
