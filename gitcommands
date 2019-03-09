@@ -14,3 +14,19 @@ commiting the merged section
 
 git commit -m "feature and master branch merged" 
 
+
+Git Rebase-
+==========
+
+We Rebase the feature branch where it has been branched 
+
+master   M1 -> M2 -> M3
+               |
+feature        M2-> F1-> F2 
+
+after below command feature branch will have new structure 
+git rebase master 
+
+master   M1 -> M2 -> M3
+                     |
+feature              M3-> F1-> F2 
