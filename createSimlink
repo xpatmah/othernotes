@@ -1,1 +1,4 @@
+mklink /J C:\LinkToFolder C:\Users\Name\OriginalFolder
+
+
 mklink /J D:\Code\ui\react\react-complete-guide\node_modules  D:\Code\node_modules
