@@ -100,3 +100,15 @@ if topic is not there and if you run this command as a result the topic will be 
 and partitions will be 1 you need to changes the num.partitions=1 in server.properties file if you want more topic to produce by default 
 
 
+== kafka console consumer==
+
+it listen the kafka topic to consume the message
+
+kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic first_topic
+
+
+if this consumer is down and topic has more message it wont read the previous messages until you will start it with the flag
+
+
+kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic first_topic --from-beginning
+
