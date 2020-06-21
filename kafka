@@ -80,3 +80,23 @@ kafka-topics --zookeeper 127.0.0.1:2181 --topic second_topic --delete
 
 (By default the delete.topic.enable is set to true and it will delete the topic)
 
+
+== kafka console producer ==
+
+kafka-console-producer --broker-list 127.0.0.1:9092 --topic first_topic
+> hello
+>local
+press cntrcl C
+
+kafka-console-producer --broker-list 127.0.0.1:9092 --topic first_topic --producer-property acks=all
+> hello
+>local
+press cntrcl C
+
+kafka-console-producer --broker-list 127.0.0.1:9092 --topic new_topic --producer-property acks=all
+
+if topic is not there and if you run this command as a result the topic will be created and then leader elction will happen
+
+and partitions will be 1 you need to changes the num.partitions=1 in server.properties file if you want more topic to produce by default 
+
+
