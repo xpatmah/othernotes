@@ -112,3 +112,17 @@ if this consumer is down and topic has more message it wont read the previous me
 
 kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic first_topic --from-beginning
 
+
+== kafka consumer group ==
+
+it listen the kafka topic to consume the message with group only one consumer will reads 
+
+kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic first_topic --group my-first_application
+
+kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic first_topic --group my-first_application
+
+below will read the message from beginning
+
+kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic first_topic --group my-second_application --from-beginning
+
+if you start again with the same command it will not read from beginning because offset has been commited 
