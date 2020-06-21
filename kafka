@@ -126,3 +126,33 @@ below will read the message from beginning
 kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic first_topic --group my-second_application --from-beginning
 
 if you start again with the same command it will not read from beginning because offset has been commited 
+
+
+== kafka consumer group CLI ==
+
+you can modify consumer groups 
+
+kafka-consumer-groups --bootstrap-server 127.0.0.1:9092 --list
+
+kafka-consumer-groups --bootstrap-server 127.0.0.1:9092 --describe --group my-first_application
+
+
+== Reset the offset
+
+kafka-consumer-groups --bootstrap-server 127.0.0.1:9092 --group my-first_application --reset-offsets --to-earliest --execute --topic first_topic
+
+
+kafka-consumer-groups --bootstrap-server 127.0.0.1:9092 --group my-first_application --reset-offsets --shift-by -2 --execute --topic first_topic
+
+--shift-by (+ve/-ve) +ve for forward -ve for backward
+Producer with keys
+
+
+kafka-console-producer --broker-list 127.0.0.1:9092 --topic first_topic --property parse.key=true --property key.separator=,
+> key,value
+> another key,another value
+
+Consumer with keys
+
+kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic first_topic --from-beginning --property print.key=true --property key.separator=,
+
