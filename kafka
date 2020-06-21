@@ -49,3 +49,34 @@ Start Kafka in another terminal window: kafka-server-start.sh config/server.prop
 
 Important: For the rest of the course, don't forget to add the extension .sh to commands being run
 
+
+== kafka CLI ==
+
+create the topics 
+
+kafka-topics --zookeeper 127.0.0.1:2181 --topic first_topic --create --partitions 3 --replication-factor 1
+
+(Note -: replication-factor can not be more that no of brokers as of now we have only started one broker)
+
+list the topics 
+
+kafka-topics --zookeeper 127.0.0.1:2181 --list
+
+describe the topic
+
+kafka-topics --zookeeper 127.0.0.1:2181 --topic first_topic --describe
+
+create the topic with more partitions
+
+kafka-topics --zookeeper 127.0.0.1:2181 --topic second_topic --create --partitions 6 --replication-factor 1
+
+list the topics 
+
+kafka-topics --zookeeper 127.0.0.1:2181 --list
+
+delete the topic
+
+kafka-topics --zookeeper 127.0.0.1:2181 --topic second_topic --delete
+
+(By default the delete.topic.enable is set to true and it will delete the topic)
+
